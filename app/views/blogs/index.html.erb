@@ -2,13 +2,29 @@
 
 <h1>Blogs</h1>
 
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Blog Title</th>
+      <th>body</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.body %></td>
+      <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+      <td><%= link_to 'Show', blog %></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= button_to 'Delete Post', blog, method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
 
 <%= link_to "New blog", new_blog_path %>
