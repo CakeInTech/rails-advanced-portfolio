@@ -6,4 +6,8 @@
 
 <p><%= @portfolio_items.body %></p>
 
+<h2>Technologies</h2>
 
+<% @portfolio_items.technologies.each do |t| %>
+<p><%= t.name %></p>
+<% end %>
