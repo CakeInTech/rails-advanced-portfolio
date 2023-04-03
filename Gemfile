@@ -66,3 +66,5 @@ end
 
 # Use friendly_id for more readable urls
 gem 'friendly_id', '~> 5.4.0'
+# Use devise for authentication
+gem 'devise', '~> 4.9', '>= 4.9.1'
