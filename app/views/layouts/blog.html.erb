@@ -23,7 +23,7 @@
     <%= link_to 'Login', new_user_session_path %>
     <% end %>
     <%= yield %>
-    <%= render "partials/navbar" %>
+    <%= render "partials/navbar", location: 'bottom' %>
     <% if session[:source] %>
       <p>Thanks for visiting me from <%= session[:source] %></p>
     <% end %>

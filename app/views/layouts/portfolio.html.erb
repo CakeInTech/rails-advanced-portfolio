@@ -15,7 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render "partials/navbar" %>
+    <%= render "partials/navbar", location: "top" %>
 
     <% if current_user.is_a?(User) %>
     <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
