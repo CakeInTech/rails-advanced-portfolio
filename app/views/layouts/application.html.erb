@@ -18,8 +18,6 @@
     <%= render "partials/navbar", location: 'top'%>
     <%= login_helper %>
     <%= yield %>
-    <% if session[:source] %>
-      <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+    <%= source_helper %>
   </body>
 </html>
