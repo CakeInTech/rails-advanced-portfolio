@@ -7,4 +7,8 @@ class Blog < ApplicationRecord
   validates :body, presence: true
 
   belongs_to :topic
+
+  def self.special_blogs
+    all
+  end
 end
