@@ -71,3 +71,4 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'devise', '~> 4.9', '>= 4.9.1'
 # Custom made gem for utility
 gem 'cakes_view_tool', '~> 0.2.0'
+gem 'petergate', '~> 3.0'
