@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/CakeInTech/cakes_view_tool
-  revision: 60a74827b3eb6b1a3f22138e8a035fc37f350314
-  specs:
-    cakes_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,6 +72,7 @@ GEM
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
+    cakes_view_tool (0.2.0)
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
@@ -224,7 +219,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  cakes_view_tool!
+  cakes_view_tool (~> 0.2.0)
   cssbundling-rails
   debug
   devise (~> 4.9, >= 4.9.1)
