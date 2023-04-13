@@ -69,3 +69,5 @@ end
 gem 'friendly_id', '~> 5.4.0'
 # Use devise for authentication
 gem 'devise', '~> 4.9', '>= 4.9.1'
+# Custom made gem for utility
+gem "cakes_view_tool", git: 'https://github.com/CakeInTech/cakes_view_tool'
