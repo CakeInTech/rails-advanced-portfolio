@@ -1,13 +1,7 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-
-/*
- * Globals
- */
-
-
- .bd-placeholder-img {
+.bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
@@ -79,96 +73,82 @@
     z-index: 1500;
   }
 
-/* Custom default button */
-.btn-light,
-.btn-light:hover,
-.btn-light:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  /* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  border-bottom: 1px solid #e5e5e5;
 }
 
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
 
 /*
- * Base structure
+ * Blog posts
  */
-
-body {
-  height: 100vh !important;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+.blog-post {
+  margin-bottom: 4rem;
 }
-
-.cover-container {
-  max-width: 65rem;
+.blog-post-title {
+  font-size: 2.5rem;
 }
-
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
 
 /*
- * Header
+ * Footer
  */
-
-.nav-masthead .nav-link {
-  color: rgba(255, 255, 255, .5);
-  border-bottom: .25rem solid transparent;
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-/*
+  /*
  * Custom Styles
  */
 
 .navb-button {
   background: none;
   border: none;
-}
-
-.navb-button, [type=button] {
-  margin-left: 16px;
-}
-
-.card-body {
-  text-align: left;
-}
-
-.auth-links a {
-  color: black;
-}
-
-.register-text {
-  float: right;
-}
-
-.login > .card {
-  width: 22rem;
-  margin: 0 auto;
-  float: none;
-}
-
-.card {
-  --bs-card-border-radius: 0.2rem;
-}
-
-.form-control {
-  border-radius: 0.2rem;
-}
-
-.form-control:focus {
-  box-shadow: none;
-}
-
-.btn {
-  --bs-btn-border-radius: 0.2rem;
 }
