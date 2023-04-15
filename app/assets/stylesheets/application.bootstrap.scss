@@ -99,7 +99,7 @@ body {
 }
 
 .cover-container {
-  max-width: 70em;
+  max-width: 55em;
 }
 
 
@@ -124,4 +124,16 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+/*
+ * Custom Styles
+ */
+
+.card-body {
+  text-align: left;
+}
+
+.auth-links a {
+  color: black;
 }
