@@ -14,15 +14,21 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= render "partials/navbar", location: 'top'%>
-    <%= login_helper %>
-    <%= yield %>
 
-    <%= copyright_generator  %>
-    <%= source_helper %>
+  <body class="d-flex flex-column text-center text-bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <%= render "partials/application_nav"%>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= source_helper %>
+
+        <%= login_helper %>
+        <%= yield %>
+        <%= render "partials/footer" %>
+
+    </div>
   </body>
 </html>
