@@ -99,7 +99,7 @@ body {
 }
 
 .cover-container {
-  max-width: 60rem;
+  max-width: 65rem;
 }
 
 
@@ -140,4 +140,26 @@ body {
 
 .register-text {
   float: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+.card {
+  --bs-card-border-radius: 0.2rem;
+}
+
+.form-control {
+  border-radius: 0.2rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn {
+  --bs-btn-border-radius: 0.2rem;
 }
