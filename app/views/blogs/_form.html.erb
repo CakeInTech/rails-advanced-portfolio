@@ -1,7 +1,8 @@
-<%= form_with(model: blog) do |form| %>
+<%= form_with(model: blog, class: "needs-validation", novalidate: true) do |form| %>
   <% if blog.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(blog.errors.count, "error") %>
+        prohibited this blog from being saved:</h2>
 
       <ul>
         <% blog.errors.each do |error| %>
@@ -11,24 +12,38 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+      Please provide a title.
+    </div>
   </div>
 
-  <div>
-    <%= form.label :topic_id %>
-    <%= form.collection_select(:topic_id, Topic.all, :id, :title, {
-      include_blank: true
-    }) %>
+  <div class="mb-3">
+    <%= form.label :topic_id, class: "form-label" %>
+    <%= form.collection_select(
+      :topic_id,
+      Topic.all,
+      :id,
+      :title,
+      { include_blank: true },
+      { class: "form-select", required: true }
+    ) %>
+    <div class="invalid-feedback">
+      Please select a topic.
+    </div>
   </div>
 
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+  <div class="mb-3">
+    <%= form.label :body, class: "form-label" %>
+    <%= form.text_area :body, class: "form-control", rows: 15, required: true %>
+    <div class="invalid-feedback">
+      Please provide a body.
+    </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.submit "Save", class: "btn btn-primary" %>
   </div>
 <% end %>

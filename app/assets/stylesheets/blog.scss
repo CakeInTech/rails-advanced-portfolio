@@ -167,3 +167,23 @@ h1, h2, h3, h4, h5, h6 {
 .helper-buttons {
   display: flex;
 }
+
+.form-select {
+  border-radius: 0.2rem;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0.2rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn {
+  --bs-btn-border-radius: 0.2rem;
+}

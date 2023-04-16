@@ -1,10 +1,7 @@
-<p style="color: green"><%= notice %></p>
+<h2><%= @blog.title %></h2>
 
-<%= render @blog %>
+<%= link_to "Edit", edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
-<div>
-  <%= link_to "Edit this blog", edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-  <%= link_to "Back to blogs", blogs_path %>
-
-  <%= button_to "Delete this blog", @blog, method: :delete if logged_in?(:site_admin) %>
-</div>
+<p>
+  <%= @blog.body %>
+</p>
