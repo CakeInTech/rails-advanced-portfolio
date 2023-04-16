@@ -76,7 +76,9 @@
   /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
-  border-bottom: 1px solid #e5e5e5;
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
 }
 
 .blog-header-logo {
@@ -148,7 +150,20 @@ h1, h2, h3, h4, h5, h6 {
  * Custom Styles
  */
 
+ .container {
+   max-width: 66rem;
+ }
+
 .navb-button {
   background: none;
   border: none;
+}
+
+.blog-delete-btn {
+  background: none;
+  border: none;
+}
+
+.helper-buttons {
+  display: flex;
 }

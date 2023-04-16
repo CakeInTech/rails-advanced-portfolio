@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><%= @page_title %></title>
-
     <meta name="keywords" content="<%= @seo_keywords %>"
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,19 +13,17 @@
     <%= javascript_importmap_tags %>
   </head>
 
-
-
   <body class="d-flex flex-column text-center text-bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-        <%= render "partials/application_nav"%>
+      <%= render "partials/application_nav" %>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= source_helper %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= source_helper %>
 
-        <%= yield %>
-        <%= render "partials/footer" %>
+      <%= yield %>
+      <%= render "partials/footer" %>
 
     </div>
   </body>

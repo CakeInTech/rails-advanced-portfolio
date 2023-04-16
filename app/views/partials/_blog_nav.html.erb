@@ -1,15 +1,30 @@
-<header class="blog-header lh-1 py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-    <div class="col-3 pt-1">
-        <h3 class="link-secondary "><%= link_to "CAKE.", root_path, class: "text-decoration-none" %></h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <%= link_to "CAKE.", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About Me", about_me_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Blog", blogs_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Portfolio", portfolios_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item helper-buttons">
+          <%= login_helper 'nav-link navb-button' %>
+        </li>
+      </ul>
     </div>
-    <div class="col-9 d-flex justify-content-end align-items-center">
-        <a class="p-2 link-secondary text-decoration-none <%= 'active' if current_page?(root_path) %>" href="<%= root_path %>">Home</a>
-        <a class="p-2 link-secondary text-decoration-none <%= 'active' if current_page?(about_me_path) %>" href="<%= about_me_path %>">About</a>
-        <a class="p-2 link-secondary text-decoration-none <%= 'active' if current_page?(contact_path) %>" href="<%= contact_path %>">Contact</a>
-        <a class="p-2 link-secondary text-decoration-none <%= 'active' if current_page?(blogs_path) %>" href="<%= blogs_path %>">Blog</a>
-        <a class="p-2 link-secondary text-decoration-none <%= 'active' if current_page?(portfolios_path) %>" href="<%= portfolios_path %>">Portfolio</a>
-        <%= login_helper "p-2 link-secondary text-decoration-none navb-button"%>
-    </div>
-    </div>
-</header>
+  </div>
+</nav>

@@ -88,6 +88,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    erb-formatter (0.4.3)
+      syntax_tree (~> 6.0)
     erubi (1.12.0)
     ffi (1.15.5)
     friendly_id (5.4.2)
@@ -134,6 +136,7 @@ GEM
     petergate (3.0.0)
       activerecord (> 4.0.0)
     pg (1.4.6)
+    prettier_print (1.2.1)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -195,6 +198,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    syntax_tree (6.1.1)
+      prettier_print (>= 1.2.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -225,6 +230,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise (~> 4.9, >= 4.9.1)
+  erb-formatter
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder

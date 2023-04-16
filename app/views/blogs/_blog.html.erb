@@ -1,9 +1,20 @@
-<tr>
-  <td><%= blog.title.upcase %></td>
-  <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
-  <td><%= blog.body %></td>
-  <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-  <td><%= link_to 'Show', blog %></td>
-  <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>
-  <td><%= button_to 'Delete Post', blog, method: :delete if logged_in?(:site_admin) %></td>
-</tr>
+<article class="blog-post">
+  <h2 class="blog-post-title mb-1"><%= link_to blog.title.upcase, blog %></h2>
+  <p class="blog-post-meta">Published
+    <%= distance_of_time_in_words(blog.created_at, Time.now) %>
+    ago</p>
+  <% if logged_in?(:site_admin) %>
+    <p class="blog-post-meta">
+      <%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin) %>
+      /
+      <%= link_to "Edit", edit_blog_path(blog) if logged_in?(:site_admin) %>
+      /
+      <%= if logged_in?(:site_admin)
+        button_to "Delete Post", blog, method: :delete, class: "blog-delete-btn"
+      end %>
+    </p>
+  <% end %>
+  <p>
+    <%= blog.body %>
+  </p>
+</article>
