@@ -3,7 +3,7 @@
   "private": "true",
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --external:controllers/application --external:@hotwired/stimulus-loading",
-    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/blog.scss ./app/assets/builds/blog.css --no-source-map --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/blog.scss ./app/assets/builds/blog.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/portfolio.scss ./app/assets/builds/portfolio.css --no-source-map --load-path=node_modules"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",

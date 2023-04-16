@@ -1,5 +1,4 @@
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
-
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <%#= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
+    <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+</div>

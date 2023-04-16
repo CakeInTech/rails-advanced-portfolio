@@ -1,9 +1,28 @@
-<p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p>
+ <div class="col">
+    <div class="card shadow-sm">
+        <%# <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> %>
+        <%= image_tag(portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top") unless portfolio_item.thumb_image.nil? %>
+        <div class="card-body">
+            <p class="card-text">
+                <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span> <%= portfolio_item.subtitle %>
+            </p>
+            <p class="card-body">
+            <%= portfolio_item.body %>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Source</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Live</button>
+            </div>
+            <small class="text-body-secondary">9 mins</small>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p><%= portfolio_item.subtitle %></p>
 
-<p><%= portfolio_item.body %></p>
+<p></p>
 
-<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-<%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin)%>
+
+ <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin)%>
 <%= button_to "Delete", portfolio_path(portfolio_item), method: :delete if logged_in?(:site_admin) %>
