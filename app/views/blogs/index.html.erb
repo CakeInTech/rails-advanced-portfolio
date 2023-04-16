@@ -1,10 +1,5 @@
-<h3 class="pb-4 mb-4 fst-italic border-bottom">
-  From the Firehose
-</h3>
+<%= paginate @blogs %>
 
 <%= render @blogs %>
 
-<nav class="blog-pagination" aria-label="Pagination">
-  <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-  <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
-</nav>
+<%= paginate @blogs %>

@@ -12,18 +12,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "blog", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
     <%= render "partials/blog_nav" %>
-
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">My Blog</h1>
-        <%= link_to "Write a New Blog", new_blog_path if logged_in?(:site_admin) %>
-      </div>
-    </div>
+    <%= render "partials/blog_masthead" %>
 
     <div class="container">
 
@@ -35,12 +29,9 @@
           <%= yield %>
         </div>
         <%= render 'partials/blog_sidebar' %>
-      <%#= render "partials/navbar", location: 'bottom' %>
       <%= source_helper %>
 
     </div>
-    <footer class="blog-footer">
-      <%= copyright_generator %>
-    </footer>
+    <%= render "partials/blog_footer" %>
   </body>
 </html>

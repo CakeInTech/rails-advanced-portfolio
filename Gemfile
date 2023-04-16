@@ -73,3 +73,4 @@ gem 'devise', '~> 4.9', '>= 4.9.1'
 # Custom made gem for utility
 gem 'cakes_view_tool', '~> 0.2.0'
 gem 'petergate', '~> 3.0'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
