@@ -16,7 +16,7 @@
     <%= render 'partials/portfolio_nav' %>
     <main class="container">
       <%= source_helper %>
-      <%= render "partials/portfolio_masthead" %>
+      <%= render "partials/portfolio_masthead" unless logged_in?(:site_admin) %>
       <%= yield %>
     </main>
     <%= render "partials/portfolio_footer" %>
