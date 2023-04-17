@@ -9,11 +9,7 @@
             <div class="col-sm-4 offset-md-1 py-4">
             <h4>Pages</h4>
             <ul class="list-unstyled">
-                <li><%= link_to "Home", root_path, class: "text-white text-decoration-none" %></li>
-                <li><%= link_to "About", about_me_path, class: "text-white text-decoration-none" %></li>
-                <li><%= link_to "Contact", contact_path, class: "text-white text-decoration-none" %></li>
-                <li><%= link_to "Blog", blogs_path, class: "text-white text-decoration-none" %></li>
-                <li><%= link_to "Portfolio", portfolios_path, class: "text-white text-decoration-none" %></li>
+                <%= nav_generator 'text-white text-decoration-none', 'li' %>
                 <li class="helper-buttons"><%= login_helper "text-white text-decoration-none navb-button"%></li>
             </ul>
             </div>

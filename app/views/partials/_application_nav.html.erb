@@ -2,11 +2,7 @@
   <div>
     <h3 class="float-md-start mb-0"><%= link_to "CAKE.", root_path, class: "text-decoration-none text-white" %></h3>
     <nav class="nav nav-masthead justify-content-center float-md-end">
-      <a class="nav-link fw-bold py-1 px-0 <%= 'active' if current_page?(root_path) %>" href="<%= root_path %>">Home</a>
-      <a class="nav-link fw-bold py-1 px-0 <%= 'active' if current_page?(about_me_path) %>" href="<%= about_me_path %>">About</a>
-      <a class="nav-link fw-bold py-1 px-0 <%= 'active' if current_page?(contact_path) %>" href="<%= contact_path %>">Contact</a>
-      <a class="nav-link fw-bold py-1 px-0 <%= 'active' if current_page?(blogs_path) %>" href="<%= blogs_path %>">Blog</a>
-      <a class="nav-link fw-bold py-1 px-0 <%= 'active' if current_page?(portfolios_path) %>" href="<%= portfolios_path %>">Portfolio</a>
+      <%= nav_generator 'nav-link fw-bold py-1 px-0  app-nav', 'span' %>
       <%= login_helper "nav-link fw-bold py-1 px-0 navb-button"%>
     </nav>
   </div>
