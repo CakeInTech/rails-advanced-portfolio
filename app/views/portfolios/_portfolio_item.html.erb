@@ -1,6 +1,5 @@
  <div class="col">
     <div class="card shadow-sm">
-        <%# <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> %>
         <%= image_tag(portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top") unless portfolio_item.thumb_image.nil? %>
         <div class="card-body">
             <p class="card-text">
@@ -19,10 +18,3 @@
         </div>
     </div>
 </div>
-
-
-<p></p>
-
-
- <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin)%>
-<%= button_to "Delete", portfolio_path(portfolio_item), method: :delete if logged_in?(:site_admin) %>

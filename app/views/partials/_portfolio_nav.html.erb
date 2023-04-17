@@ -1,0 +1,31 @@
+<header data-bs-theme="dark">
+    <div class="collapse text-bg-dark" id="navbarHeader">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+            <h4>About</h4>
+            <p class="text-body-secondary">Hello and welcome to my web development portfolio! As a web developer, I'm passionate about creating stunning, user-friendly websites and applications that solve real-world problems. On this page, you'll find a showcase of my web development projects, including responsive designs, dynamic interfaces, and robust backend functionality. </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+            <h4>Pages</h4>
+            <ul class="list-unstyled">
+                <li><%= link_to "Home", root_path, class: "text-white text-decoration-none" %></li>
+                <li><%= link_to "About", about_me_path, class: "text-white text-decoration-none" %></li>
+                <li><%= link_to "Contact", contact_path, class: "text-white text-decoration-none" %></li>
+                <li><%= link_to "Blog", blogs_path, class: "text-white text-decoration-none" %></li>
+                <li><%= link_to "Portfolio", portfolios_path, class: "text-white text-decoration-none" %></li>
+                <li class="helper-buttons"><%= login_helper "text-white text-decoration-none navb-button"%></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <strong><%= link_to "CAKE.", root_path, class: "navbar-brand d-flex align-items-center" %></strong>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+    </div>
+</header>

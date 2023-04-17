@@ -72,3 +72,43 @@
   .bd-mode-toggle {
     z-index: 1500;
   }
+
+  /*
+  * Custom Styles
+  */
+
+.navb-button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.helper-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select {
+  border-radius: 0.2rem;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0.2rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn {
+  --bs-btn-border-radius: 0.2rem;
+}
+
+.navbar {
+  --bs-navbar-toggler-border-radius: 0.2rem;
+  --bs-navbar-toggler-focus-width: 0.1rem;
+}
