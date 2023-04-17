@@ -15,11 +15,10 @@
   <body>
     <%= render 'partials/portfolio_nav' %>
     <main class="container">
-    <%= render "partials/portfolio_masthead" %>
-      <%#= render "partials/navbar", location: "top" %>
-    <%= source_helper %>
+      <%= source_helper %>
+      <%= render "partials/portfolio_masthead" %>
       <%= yield %>
-      </main>
-      <%= render "partials/portfolio_footer" %>
+    </main>
+    <%= render "partials/portfolio_footer" %>
   </body>
 </html>
