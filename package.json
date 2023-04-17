@@ -2,7 +2,7 @@
   "name": "cake-portfolio",
   "private": "true",
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --external:controllers/application --external:@hotwired/stimulus-loading",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/blog.scss ./app/assets/builds/blog.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/portfolio.scss ./app/assets/builds/portfolio.css --no-source-map --load-path=node_modules"
   },
   "dependencies": {
@@ -11,7 +11,7 @@
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
-    "esbuild": "^0.14.5",
+    "esbuild": "^0.17.17",
     "sass": "^1.61.0"
   }
 }
