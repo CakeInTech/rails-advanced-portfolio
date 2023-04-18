@@ -8,8 +8,3 @@ import "./html.sortable";
 import "./src/jquery"
 import "./src/jquery-ui"
 import "./portfolio"
-
-$(function() {
-    console.log("hello world")
-    $( "#dialog" ).dialog();
-})

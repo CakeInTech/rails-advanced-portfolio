@@ -1,4 +1,4 @@
- <div class="col">
+ <div class="col" data-id="<%= portfolio_item.id %>" >
     <div class="card shadow-sm">
         <%= image_tag(portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top") unless portfolio_item.thumb_image.nil? %>
         <div class="card-body">
