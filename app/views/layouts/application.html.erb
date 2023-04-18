@@ -16,7 +16,14 @@
   <body class="d-flex flex-column text-center text-bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-      <div id="background"></div>
+      <%= video_tag(
+        'HardDrivePhotojpeg.mp4',
+        id: 'background',
+        autoplay: true,
+        loop: true,
+        muted: true,
+        poster: 'home_bg.png'
+      ) %>
 
       <%= render "partials/application_nav" %>
 
