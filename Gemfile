@@ -74,5 +74,5 @@ gem 'devise', '~> 4.9', '>= 4.9.1'
 gem 'cakes_view_tool', '~> 0.2.0'
 gem 'petergate', '~> 3.0'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
-
+gem 'coffee-rails', '~> 5.0.0'
 gem "jsbundling-rails", "~> 1.1"
