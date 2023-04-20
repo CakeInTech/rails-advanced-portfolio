@@ -1,6 +1,11 @@
- <div class="col" data-id="<%= portfolio_item.id %>" >
+<div class="col" data-id="<%= portfolio_item.id %>" >
     <div class="card shadow-sm">
-        <%= image_tag(portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top") unless portfolio_item.thumb_image.nil? %>
+        <%# binding.pry %>
+        <%= image_tag url_for(portfolio_item.thumb_image.variant(resize_to_fill: [350, 200])), class: "bd-placeholder-img card-img-top" %>
+
+        <%= if logged_in?(:site_admin)
+        button_to "Delete Portfolio", portfolio_item, method: :delete, class: "blog-delete-btn"
+      end %>
         <div class="card-body">
             <p class="card-text">
                 <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span> <%= portfolio_item.subtitle %>
