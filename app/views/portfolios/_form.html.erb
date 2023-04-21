@@ -10,15 +10,15 @@
         <%= form.label :subtitle, style: "display: block", class: "form-label" %>
         <%= form.text_field :subtitle, class: "form-control" %>
       </div>
-
       <div class="mb-3">
-        <%= form.file_field :main_image %>
+        <%= form.label :main_image, class: "form-label" %>
+        <%= form.file_field :main_image, class: "form-control", id: "formFile" %>
       </div>
 
       <div class="mb-3">
-        <%= form.file_field :thumb_image %>
+        <%= form.label :thumb_image, class: "form-label" %>
+        <%= form.file_field :thumb_image, class: "form-control", id: "formFile" %>
       </div>
-
     </div>
     <div class="col-md-6">
       <div class="mb-3">
