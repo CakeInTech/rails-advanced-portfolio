@@ -176,4 +176,26 @@ body {
 .app-nav {
   margin-right: 15px;
   margin-left: 15px;
+  color: white;
 }
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  --webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('home_bg.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app-footer {
+  color: white;
+}
+@import 'actiontext.css';

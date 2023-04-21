@@ -78,6 +78,22 @@
   * Custom Styles
   */
 
+.container {
+  margin-top: 50px;
+}
+
+.container-nav {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: 125.556px;
+  margin-left: 125.556px;
+}
+
 .navb-button {
   background: none;
   border: none;

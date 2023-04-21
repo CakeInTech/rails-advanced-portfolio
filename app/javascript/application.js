@@ -8,3 +8,5 @@ import "./html.sortable";
 import "./src/jquery"
 import "./src/jquery-ui"
 import "./portfolio"
+import "trix"
+import "@rails/actiontext"
