@@ -22,5 +22,6 @@ module CakePortfolio
   class Application < Rails::Application
     config.load_defaults 7.0
     config.generators.system_tests = nil
+    config.aws_credentials = Rails.application.credentials.aws
   end
 end
