@@ -3,7 +3,7 @@
         <%# binding.pry %>
         <%= image_tag url_for(portfolio_item.thumb_image.variant(resize_to_fill: [350, 200])), class: "bd-placeholder-img card-img-top" %>
 
-        <%= if logged_in?(:site_admin)
+        <%#= if logged_in?(:site_admin)
         button_to "Delete Portfolio", portfolio_item, method: :delete, class: "blog-delete-btn"
       end %>
         <div class="card-body">
