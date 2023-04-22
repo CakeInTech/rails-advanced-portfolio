@@ -121,6 +121,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    gritter (1.2.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -281,6 +282,7 @@ DEPENDENCIES
   devise (~> 4.9, >= 4.9.1)
   erb-formatter
   friendly_id (~> 5.4.0)
+  gritter (~> 1.2)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

@@ -253,6 +253,11 @@ glob-parent@~5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
+gritter@^1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/gritter/-/gritter-1.7.4.tgz#cdb83982bd19e2ce93be73971e1320a3261133e1"
+  integrity sha512-yqCTsfCSqi2fsajkuTWomqt6sOr78sAbUWrdb0E6I2QmFJoVVHT/I0JyTBhVmCWBBF46cDZqKg/K9rP2NUNKng==
+
 immutable@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.0.tgz#eb1738f14ffb39fd068b1dbe1296117484dd34be"

@@ -1,4 +1,10 @@
 <%= form_for(portfolio_items) do |form| %>
+  <% if portfolio_items.errors.any? %>
+     <% portfolio_items.errors.full_messages.each do |error|  %>
+       <%= js add_gritter(error, :title => "Mohamed Cake Portfolio", sticky: false) %>
+     <% end %>
+  <% end %>
+
   <div class="row">
     <div class="col-md-6">
       <div class="mb-3">

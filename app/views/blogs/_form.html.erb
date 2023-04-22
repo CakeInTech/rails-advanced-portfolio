@@ -1,20 +1,13 @@
 <%= form_with(model: blog, class: "needs-validation", novalidate: true) do |form| %>
   <% if blog.errors.any? %>
-    <div class="alert alert-danger">
-      <h2><%= pluralize(blog.errors.count, "error") %>
-        prohibited this blog from being saved:</h2>
-
-      <ul>
-        <% blog.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+     <% blog.errors.full_messages.each do |error|  %>
+       <%= js add_gritter(error, :title => "Mohamed Cake Portfolio", sticky: false) %>
+     <% end %>
   <% end %>
 
   <div class="mb-3">
     <%= form.label :title, class: "form-label" %>
-    <%= form.text_field :title, class: "form-control", required: true %>
+    <%= form.text_field :title, class: "form-control" %>
     <div class="invalid-feedback">
       Please provide a title.
     </div>
@@ -28,7 +21,7 @@
       :id,
       :title,
       { include_blank: true },
-      { class: "form-select", required: true }
+      { class: "form-select"}
     ) %>
     <div class="invalid-feedback">
       Please select a topic.
@@ -37,7 +30,7 @@
 
   <div class="mb-3">
     <%= form.label :body, class: "form-label" %>
-    <%= form.text_area :body, class: "form-control", rows: 15, required: true %>
+    <%= form.text_area :body, class: "form-control", rows: 15%>
     <div class="invalid-feedback">
       Please provide a body.
     </div>

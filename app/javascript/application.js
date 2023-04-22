@@ -8,6 +8,7 @@ import "./html.sortable";
 import "./src/jquery"
 import "./src/jquery-ui"
 import "@nathanvda/cocoon"
+import "gritter/js/jquery.gritter.js"
 import "./portfolio"
 import "trix"
 import "@rails/actiontext"
