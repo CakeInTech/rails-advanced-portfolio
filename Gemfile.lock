@@ -89,6 +89,7 @@ GEM
     builder (3.2.4)
     byebug (11.1.3)
     cakes_view_tool (0.2.0)
+    cocoon (1.2.15)
     coderay (1.1.3)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
@@ -273,6 +274,7 @@ DEPENDENCIES
   aws-sdk-s3 (~> 1.121)
   bootsnap
   cakes_view_tool (~> 0.2.0)
+  cocoon (~> 1.2, >= 1.2.15)
   coffee-rails (~> 5.0.0)
   cssbundling-rails
   debug

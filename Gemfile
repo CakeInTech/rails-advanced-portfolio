@@ -77,3 +77,4 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'coffee-rails', '~> 5.0.0'
 gem "jsbundling-rails", "~> 1.1"
 gem 'aws-sdk-s3', '~> 1.121', require: false
+gem 'cocoon', '~> 1.2', '>= 1.2.15'

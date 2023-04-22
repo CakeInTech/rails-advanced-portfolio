@@ -17,16 +17,15 @@ class PortfoliosController < ApplicationController
 
   def new
    @portfolio_items = Portfolio.new
-   3.times { @portfolio_items.technologies.build }
   end
 
   def edit
   end
 
   def update
-    @portfolio_items = Portfolio.find(portfolio_params)
+    @portfolio_items = set_portfolio_item
     respond_to do |format|
-      if @portfolio_items.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+      if @portfolio_items.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: "The record successfully updated." }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,7 +49,8 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_items.destroy
+    @portfolio_item = set_portfolio_item
+    @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to portfolios_path, notice: 'Record was removed '}
     end
@@ -64,7 +64,8 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :main_image,
                                       :thumb_image,
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: %i[id name _destroy]
+                                    )
   end
 
   def set_portfolio_item

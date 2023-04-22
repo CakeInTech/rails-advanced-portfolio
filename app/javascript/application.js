@@ -7,6 +7,7 @@ import { flip } from "@popperjs/core";
 import "./html.sortable";
 import "./src/jquery"
 import "./src/jquery-ui"
+import "@nathanvda/cocoon"
 import "./portfolio"
 import "trix"
 import "@rails/actiontext"
