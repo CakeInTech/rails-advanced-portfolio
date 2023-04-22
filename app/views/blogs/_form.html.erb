@@ -1,7 +1,7 @@
 <%= form_with(model: blog, class: "needs-validation", novalidate: true) do |form| %>
   <% if blog.errors.any? %>
      <% blog.errors.full_messages.each do |error|  %>
-       <%= js add_gritter(error, :title => "Mohamed Cake Portfolio", sticky: false) %>
+       <%= alert_generator error %>
      <% end %>
   <% end %>
 

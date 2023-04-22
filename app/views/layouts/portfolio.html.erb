@@ -19,6 +19,7 @@
       <%= render "partials/portfolio_masthead" unless logged_in?(:site_admin) %>
       <%= yield %>
     </main>
+    <%= alerts %>
     <%= render "partials/portfolio_footer" %>
   </body>
 </html>
