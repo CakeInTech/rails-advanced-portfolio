@@ -33,3 +33,4 @@ gem "jsbundling-rails", "~> 1.1"
 gem 'aws-sdk-s3', '~> 1.121', require: false
 gem 'cocoon', '~> 1.2', '>= 1.2.15'
 gem 'gritter', '~> 1.2'
+gem 'httparty', '~> 0.21.0'

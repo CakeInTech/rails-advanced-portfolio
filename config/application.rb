@@ -12,6 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
+require './app/services/hacker_news_service'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -23,5 +24,7 @@ module CakePortfolio
     config.load_defaults 7.0
     config.generators.system_tests = nil
     config.aws_credentials = Rails.application.credentials.aws
+    # config.eager_load_path << "{Rails.root}/lib"
+    # config.autoload_paths << Rails.root.join('')
   end
 end

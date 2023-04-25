@@ -1,0 +1,11 @@
+<% require './app/services/hacker_news_service' %>
+
+<h1>Top Hacker News Stories</h1>
+
+<% @top_stories.each do |story_id| %>
+  <div>
+    <% story = HackerNewsService.get_story(story_id) %>
+    <a href="<%= story['url'] %>"><%= story['title'] %></a>
+    <p><%= story['score'] %> points by <%= story['by'] %></p>
+  </div>
+<% end %>
