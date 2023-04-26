@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  require './app/services/hacker_news_service'
+  require './app/services/tech_news'
 
   def home
     @posts = Blog.all
@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def tech_news
-    top_stories = HackerNewsService.top_stories
-    @top_stories = top_stories&.first ? HackerNewsService.get_story(top_stories.first) : nil
+    tech_news = TechNews.new(keywords: 'technology', language: 'en', category: 'programming')
+    @articles = tech_news.fetch_articles.first(6)
   end
 end

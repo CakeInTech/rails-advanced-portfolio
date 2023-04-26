@@ -12,7 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
-require './app/services/hacker_news_service'
+require './app/services/tech_news'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems

@@ -1,11 +1,16 @@
-<% require './app/services/hacker_news_service' %>
+<div class="inner cover">
+  <h1 class="cover-heading">Tech News</h1>
 
-<h1>Top Hacker News Stories</h1>
-
-<% @top_stories.each do |story_id| %>
-  <div>
-    <% story = HackerNewsService.get_story(story_id) %>
-    <a href="<%= story['url'] %>"><%= story['title'] %></a>
-    <p><%= story['score'] %> points by <%= story['by'] %></p>
+  <div class='row'>
+    <% @articles.each do |article| %>
+      <div class='col-md-6'>
+        <div class="tech-news">
+          <div class='card'>
+            <h3> <%= article[:title] %> </h3>
+            <a target="_blank" href="<%= article[:url]%>" ><%= article[:url] %></a>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
