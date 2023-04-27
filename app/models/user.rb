@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  belongs_to :comments, dependent: :destroy
+
   def first_name
     self.name.split.first
   end

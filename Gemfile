@@ -34,3 +34,4 @@ gem 'aws-sdk-s3', '~> 1.121', require: false
 gem 'cocoon', '~> 1.2', '>= 1.2.15'
 gem 'gritter', '~> 1.2'
 gem 'httparty', '~> 0.21.0'
+gem 'redis', '~> 5.0', '>= 5.0.6'
