@@ -1,0 +1,16 @@
+<div class="inner cover">
+  <h2 class="cover-heading mb-4">Tech News</h2>
+
+  <div class="row">
+    <% @articles.each do |article| %>
+      <div class="col-md-6 mb-4">
+        <div class="tech-news">
+          <div class="card h-100 d-flex justify-content-center align-items-center h-100 w-100">
+            <a target="_blank" href="<%= article[:url] %>"><h3 class="card-title"><%= article[:title] %></h3></a>
+            <p class='card-description'><%= article[:description] %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
