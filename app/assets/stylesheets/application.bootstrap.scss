@@ -2,6 +2,7 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'jquery-ui';
 @import "gritter";
+@import 'actiontext.css';
 
 /*
  * Globals
@@ -100,7 +101,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55rem;
+  max-width: 65rem;
 }
 
 
@@ -199,4 +200,26 @@ body {
 .app-footer {
   color: white;
 }
-@import 'actiontext.css';
+
+.tech-news {
+  height: 100%;
+}
+
+.tech-news a {
+  color: green;
+  text-decoration: none;
+}
+
+.tech-news > .card {
+  padding: 0 20px;
+}
+
+.card-title {
+  min-height: 60px;
+  font-size: 20px;
+}
+
+.card-description {
+  font-size: 12px;
+  color: #232727;
+}
